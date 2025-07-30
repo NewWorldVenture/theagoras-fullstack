@@ -1,1 +1,4 @@
-export default function CreateListing() { return <h2>Create a New Listing</h2>; }
+
+import React from 'react'
+const CreateListing = () => <h1>CreateListing Page</h1>
+export default CreateListing
