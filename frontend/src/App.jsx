@@ -1,11 +1,23 @@
-import React from 'react'
 
-export default function App() {
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Browse from './pages/browse';
+import Dashboard from './pages/dashboard';
+import CreateListing from './pages/create-listing';
+import Profile from './pages/[id]';
+
+function App() {
   return (
-    <div style={{ padding: '2rem', fontFamily: 'Arial' }}>
-      <h1>Welcome to TheAgoras Marketplace</h1>
-      <p>This is a test frontend landing page.</p>
-      <button onClick={() => alert('Test button working!')}>Click Me</button>
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<h1>Welcome to TheAgoras Marketplace</h1>} />
+        <Route path="/browse" element={<Browse />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/create-listing" element={<CreateListing />} />
+        <Route path="/profile/:id" element={<Profile />} />
+      </Routes>
+    </Router>
+  );
 }
+
+export default App;

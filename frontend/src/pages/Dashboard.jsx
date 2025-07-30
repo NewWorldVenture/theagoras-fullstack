@@ -1,0 +1,1 @@
+export default function Dashboard() { return <h2>Your Dashboard</h2>; }
