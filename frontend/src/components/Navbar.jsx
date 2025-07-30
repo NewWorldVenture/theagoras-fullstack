@@ -12,21 +12,22 @@ export default function Navbar() {
   const handleLogout = async () => {
     await supabase.auth.signOut();
     setUser(null);
-    window.location.reload();
+    window.location.href = '/';
   };
 
   return (
     <nav>
       <Link to="/">Home</Link>{" "}
+      <Link to="/browse">Browse</Link>{" "}
+      {user && <Link to="/create-listing">Create Listing</Link>}{" "}
+      {user && <Link to="/dashboard">Dashboard</Link>}{" "}
+      {user && <Link to="/profile">My Account</Link>}{" "}
       {user ? (
-        <>
-          <span>{user.email}</span>{" "}
-          <button onClick={handleLogout}>Logout</button>
-        </>
+        <button onClick={handleLogout}>Logout</button>
       ) : (
         <>
-          <Link to="/login">Login</Link>{" "}
-          <Link to="/register">Register</Link>
+          <Link to="/login">Log In</Link>{" "}
+          <Link to="/register">Sign Up</Link>
         </>
       )}
     </nav>

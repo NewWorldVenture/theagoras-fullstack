@@ -1,4 +1,8 @@
-
-import React from 'react'
-const Dashboard = () => <h1>Dashboard Page</h1>
-export default Dashboard
+export default function Dashboard() {
+  return (
+    <div>
+      <h2>Your Dashboard</h2>
+      <p>View your listings, saved searches, and messages here.</p>
+    </div>
+  );
+}

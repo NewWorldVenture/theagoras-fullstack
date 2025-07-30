@@ -18,6 +18,10 @@ function App() {
         <Route path="/reset-password" element={<ResetPassword />} />
   <Route path="/update-password" element={<UpdatePassword />} />
   <Route path="/seller/:sellerId" element={<SellerStorefront />} />
+<Route path="/" element={<Home />} />
+<Route path="/dashboard" element={<Dashboard />} />
+<Route path="/profile" element={<Profile />} />
+<Route path="/listing/:id" element={<ListingDetail />} />
 </Routes>
     </Router>
   );
