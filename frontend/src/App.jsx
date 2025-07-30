@@ -15,7 +15,9 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/create-listing" element={<CreateListing />} />
         <Route path="/profile/:id" element={<Profile />} />
-      </Routes>
+        <Route path="/reset-password" element={<ResetPassword />} />
+  <Route path="/update-password" element={<UpdatePassword />} />
+</Routes>
     </Router>
   );
 }

@@ -25,6 +25,6 @@ export default function Login() {
       <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} required />
       <button type="submit">Login</button>
       {error && <p>{error}</p>}
-    </form>
+    \n      <p><a href="/reset-password">Forgot Password?</a></p>\n    </form>
   );
 }
