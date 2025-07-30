@@ -17,6 +17,7 @@ function App() {
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/reset-password" element={<ResetPassword />} />
   <Route path="/update-password" element={<UpdatePassword />} />
+  <Route path="/seller/:sellerId" element={<SellerStorefront />} />
 </Routes>
     </Router>
   );
