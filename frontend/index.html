@@ -1,90 +1,107 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TheAgoras Marketplace</title>
+    <title>The Agoras Marketplace</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
-        margin: 0;
-        padding: 0;
-      }
-      header {
-        background-color: #1e3a8a;
-        color: white;
-        padding: 1rem 2rem;
-        font-size: 1.5rem;
-      }
-      .hero {
-        padding: 2rem;
-        text-align: center;
-        background: #e0e7ff;
-      }
-      .hero h1 {
-        margin-bottom: 1rem;
-        color: #1e3a8a;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 1.5rem;
-        padding: 2rem;
-      }
-      .card {
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        text-align: center;
-      }
-      .card img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-      }
-      .card h3 {
-        margin: 0.5rem 0;
-        font-size: 1.1rem;
-        color: #111827;
-      }
-      .card p {
-        margin: 0;
-        color: #6b7280;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+        }
+        header {
+            background: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+        main {
+            display: flex;
+            padding: 2rem;
+        }
+        .sidebar {
+            width: 200px;
+            padding-right: 2rem;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+        }
+        .listings {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 2rem;
+            flex-grow: 1;
+        }
+        .listing {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .listing img {
+            width: 100%;
+            border-radius: 4px;
+        }
+        .listing h4 {
+            margin: 0.5rem 0 0;
+        }
     </style>
-  </head>
-  <body>
-    <header>TheAgoras Marketplace</header>
-    <div class="hero">
-      <h1>Explore and Shop from Creators Worldwide</h1>
-      <p>Authentic items from real people – browse by category or search by location.</p>
-    </div>
-    <div class="grid">
-      <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Camera" alt="Camera">
-        <h3>Camera</h3>
-        <p>$500 – John Doe</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Shoes" alt="Running Shoes">
-        <h3>Running Shoes</h3>
-        <p>$80 – Alice Smith</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Smartphone" alt="Smartphone">
-        <h3>Smartphone</h3>
-        <p>$300 – John Doe</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x180?text=Wristwatch" alt="Wristwatch">
-        <h3>Wristwatch</h3>
-        <p>$200 – Alice Smith</p>
-      </div>
-    </div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+</head>
+<body>
+    <header>
+        <h1>The Agoras</h1>
+        <nav>
+            <a href="#">Sign Up</a>
+            <a href="#">Log In</a>
+        </nav>
+    </header>
+    <main>
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li>Saved Searches</li>
+                <li>Messages</li>
+                <li>My Account</li>
+            </ul>
+        </aside>
+        <section class="listings">
+            <div class="listing">
+                <img src="images/camera.jpg" alt="Camera" />
+                <h4>Camera</h4>
+                <p>$500</p>
+                <small>John Doe</small>
+            </div>
+            <div class="listing">
+                <img src="images/shoes.jpg" alt="Running Shoes" />
+                <h4>Running Shoes</h4>
+                <p>$80</p>
+                <small>Alicce Smith</small>
+            </div>
+            <div class="listing">
+                <img src="images/phone.jpg" alt="Smartphone" />
+                <h4>Smartphone</h4>
+                <p>$300</p>
+                <small>John Doe</small>
+            </div>
+            <div class="listing">
+                <img src="images/watch.jpg" alt="Wristwatch" />
+                <h4>Wristwatch</h4>
+                <p>$200</p>
+                <small>Alicce Smith</small>
+            </div>
+        </section>
+    </main>
+</body>
 </html>
