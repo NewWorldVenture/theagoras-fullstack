@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Browse from './pages/browse';
 import Dashboard from './pages/dashboard';
 import CreateListing from './pages/create-listing';
+import Home from './pages/Home';
+import Register from './pages/Register';
+import Login from './pages/Login';
 import Profile from './pages/[id]';
 
 function App() {
